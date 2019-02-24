@@ -13,7 +13,7 @@ WORKDIR /app
 
 # 只是声明了容器应该打开的端口并没有实际上将它打开
 # 需要使用-p或者-P中指定要映射的端口，容器端口才能映射出去
-EXPOSE [8780]
+EXPOSE [8080]
 
 # 执行命令
 ENTRYPOINT ["java","-jar","$SERVER_NAME"]
