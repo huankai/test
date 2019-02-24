@@ -4,7 +4,7 @@ FROM docker.io/java:8-jre-alpine
 MAINTAINER huangkai huankai@139.com
 
 # 定义变量
-ARG SERVER_NAME=test-0.0.1-SNAPSHOT.jar
+ENV SERVER_NAME=test-0.0.1-SNAPSHOT.jar
 
 COPY target/$SERVER_NAME /app/$SERVER_NAME
 
