@@ -3,10 +3,8 @@ FROM docker.io/java:8-jre-alpine
 #指定作者
 MAINTAINER huangkai huankai@139.com
 
-# 定义变量
-ENV SERVER_NAME=test-0.0.1-SNAPSHOT.jar
 
-COPY target/$SERVER_NAME /app/$SERVER_NAME
+COPY target/test-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # 指定工作目录
 WORKDIR /app
@@ -16,4 +14,4 @@ WORKDIR /app
 EXPOSE 8080
 
 # 执行命令
-ENTRYPOINT ["sh","-c","java","-jar","$SERVER_NAME"]
+ENTRYPOINT ["java","-jar","app.jar"]
