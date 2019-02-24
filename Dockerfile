@@ -16,4 +16,4 @@ WORKDIR /app
 EXPOSE 8080
 
 # 执行命令
-ENTRYPOINT ["java","-jar","$SERVER_NAME"]
+ENTRYPOINT ["sh","-c","java","-jar","$SERVER_NAME"]
